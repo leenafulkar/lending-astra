@@ -1,4 +1,6 @@
 import React from "react";
+import Lottie from 'react-lottie';
+
 import {
   Box,
   Button,
@@ -11,16 +13,25 @@ import {
   Paper,
 } from "@mui/material";
 import "./index.css";
-import imgMob from "../../../assets/Phones-MP24.jpg";
+// import imgMob from "../../../assets/Phones-MP24.jpg";
+import Animation2 from '../../../Lottie-Files/Animation2.json'
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: Animation2,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 const Trust = () => {
   return (
     <>
       <Box
         sx={{
           background: "#fff",
-          // position: { xs: "relative", sm: "relative", md: "relative" },
-          // top: { xs: "140px", sm: "220px", md: "220px", lg: "0px" },
-          paddingBottom: "50px",
+          position: { xs: "relative", sm: "relative", md: "relative" },
+          top: { xs: "0px", sm: "220px", md: "220px", lg: "0px" },
         }}
       >
         <Container>
@@ -31,7 +42,7 @@ const Trust = () => {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={6}>
                 <Box>
-                  <img src={imgMob} alt="mobile" width={"100%"} />
+                <Lottie options={defaultOptions}  />
                 </Box>
               </Grid>
               <Grid item xs={12} sm={12} md={6}>
