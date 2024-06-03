@@ -1,12 +1,24 @@
 import * as React from "react";
+import Lottie from 'react-lottie';
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import PhoneIcon from "@mui/icons-material/Phone";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import PersonPinIcon from "@mui/icons-material/PersonPin";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Collapse from "@mui/material/Collapse";
+import Animation1 from '../../../Lottie-Files/Animation1.json'
+import HomeEquity from '../../../Lottie-Files/Homequity.json'
+import Homepurchases from '../../../Lottie-Files/Homepurchases.json'
+import Creditcard from '../../../Lottie-Files/Creditcards.json'
+import Insurance from '../../../Lottie-Files/Insurance.json'
+import Businessloans from '../../../Lottie-Files/Businessloans.json'
+import Creditscore from '../../../Lottie-Files/Creditscore.json'
+import Homerefinance from '../../../Lottie-Files/Homerefinance.json'
+import Autoloans from '../../../Lottie-Files/Autoloans.json'
+import Debtrelief from '../../../Lottie-Files/Debtrelief.json'
+import Bankingproducts from '../../../Lottie-Files/Bankingproducts.json'
+import Studentloan from '../../../Lottie-Files/Studentloan.json'
+import PropTypes from 'prop-types';
+
 
 import {
   Box,
@@ -31,19 +43,6 @@ import OnDeviceTrainingIcon from "@mui/icons-material/OnDeviceTraining";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import SchoolIcon from "@mui/icons-material/School";
-
-import tabimg1 from "../../../assets/personal-loan-bullseye.webp";
-import tabimg2 from "../../../assets/home-equity-bullseye.webp";
-import tabimg3 from "../../../assets/home-purchase-bullseye.webp";
-import tabimg4 from "../../../assets/credit-cards-bullseye.webp";
-import tabimg5 from "../../../assets/insurance-slide-bullseye.webp";
-import tabimg6 from "../../../assets/business-loans-bullseye.webp";
-import tabimg7 from "../../../assets/credit-score-bullseye.webp";
-import tabimg8 from "../../../assets/home-refi-bullseye.webp";
-import tabimg9 from "../../../assets/debt-relief-bullseye.webp";
-import tabimg10 from "../../../assets/auto-loan-bullseye.webp";
-import tabimg11 from "../../../assets/banking-bullseye.webp";
-import tabimg12 from "../../../assets/student-loans-bullseye.webp";
 import tabFaqImg from "../../../assets/spring-intro-banner.webp";
 import img1 from "../../../assets/growth-incentives.png";
 import img2 from "../../../assets/pie-chart.png";
@@ -66,6 +65,15 @@ import {
   WorkspacePremium,
 } from "@mui/icons-material";
 
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  },
+};
+
 const tabItems = [
   {
     label: "Personal Loans",
@@ -74,7 +82,8 @@ const tabItems = [
       "Need to consolidate debt or make a large purchase? We bring the lenders to you so you can shop and compare personal loan offers in minutes.",
     content: "Content for Personal Loans",
     to: "/form-personal-loan",
-    img: tabimg1,
+    animationData : Animation1,
+    animationSize: { height: 270, width: 530 },
   },
   {
     label: "Home Equity",
@@ -83,7 +92,8 @@ const tabItems = [
       "With home values higher than ever, now’s the time to make the most of your equity. Compare offers in minutes.",
     content: "Content for Item Home Equity",
     to: "/form-equity-loan",
-    img: tabimg2,
+    animationData : HomeEquity,
+    animationSize: { height: 400, width: 400 },
   },
   {
     label: "Home Purchase",
@@ -92,7 +102,8 @@ const tabItems = [
       "Get multiple lenders to compete for your business and see how much you could save. It pays to compare your options — literally.",
     content: "Content for Item Home Purchase",
     to: "/form-home-purchase-loan",
-    img: tabimg3,
+    animationData : Homepurchases,
+    animationSize: { height: 300, width: 400 },
   },
 
   {
@@ -101,8 +112,8 @@ const tabItems = [
     subHeading:
       "From earning rewards to transferring a balance, find the right credit card to help you score everyday wins.",
     content: "Content for Item Home Purchase",
-    to: "/credit-card",
-    img: tabimg4,
+    animationData : Creditcard,
+    animationSize: { height: 300, width: 400 },
   },
   {
     label: "Insurance",
@@ -110,7 +121,9 @@ const tabItems = [
     subHeading:
       "Compare top insurance companies and get affordable, customized coverage for your car, home and more.",
     content: "Content for Item Credit Cards",
-    img: tabimg5,
+    animationData : Insurance,
+    animationSize: { height: 300, width: 400 },
+    
   },
   {
     label: "Business Loans",
@@ -119,7 +132,8 @@ const tabItems = [
       "Our network of lenders will compete for your business, so you can get the funding you need for yours.",
     content: "Content for Item Insurance",
     to: "/form-business-loan",
-    img: tabimg6,
+    animationData : Businessloans,
+    animationSize: { height: 300, width: 400 },
   },
 
   {
@@ -128,7 +142,8 @@ const tabItems = [
     subHeading:
       "Track your credit score, get personalized financial recommendations, and grow your credit health — all in LendingTree Spring. It’s free and available now!",
     content: "Content for Item Business Loans",
-    img: tabimg7,
+    animationData : Creditscore,
+    animationSize: { height: 300, width: 400 },
   },
   {
     label: "Home Refinance",
@@ -137,7 +152,8 @@ const tabItems = [
       "Get personalized refinance offers from multiple lenders in minutes and see how much you could save on your mortgage.",
     content: "Content for Item Credit Score",
     to: "/form-home-refinance",
-    img: tabimg8,
+    animationData : Homerefinance,
+    animationSize: { height: 300, width: 400 },
   },
   {
     label: "Debt Relief",
@@ -146,7 +162,8 @@ const tabItems = [
       "It’s never too late to find relief. Stop juggling bills and resolve your debt with one simple monthly payment.",
     content: "Compare debt relief options",
     to: "/form-debt-relief-loan",
-    img: tabimg9,
+    animationData : Debtrelief,
+    animationSize: { height: 300, width: 300 },
   },
   {
     label: "Auto Loans",
@@ -155,7 +172,8 @@ const tabItems = [
       "Take home the car you love. Compare auto loans to find the right fit for you.",
     content: "Content for Item Ten",
     to: "/form-auto-loan",
-    img: tabimg10,
+    animationData : Autoloans,
+    animationSize: { height: 300, width: 400 },
   },
   {
     label: "Banking Products",
@@ -163,7 +181,8 @@ const tabItems = [
     subHeading:
       "Banking shouldn’t be a hassle. Compare the best savings accounts for your money.",
     content: "Content for Item Ten",
-    img: tabimg11,
+    animationData : Bankingproducts,
+    animationSize: { height: 400, width: 400 },
   },
 
   {
@@ -172,12 +191,16 @@ const tabItems = [
     subHeading:
       "Pay for school the smart way. We’ll help you shop and compare your options in minutes.",
     content: "Content for Item Ten",
-    img: tabimg12,
-    to: "/student-loans",
+    animationData : Studentloan,
+    animationSize: { height: 350, width: 400 },
   },
 ];
 
-const OptionSection = () => {
+
+const OptionSection = ({items}) => {
+
+  
+
   const [value, setValue] = React.useState(0);
   const tabsRef = React.useRef(null);
 
@@ -241,7 +264,7 @@ const OptionSection = () => {
       subTitle: "Explore and compare credit card options.",
       content:
         "Discover the perfect credit card to earn rewards or transfer balances, helping you achieve daily victories.  ",
-      route: "/credit-card",
+      route: "/form",
     },
     {
       icon: <Shield fontSize="medium" />,
@@ -298,13 +321,14 @@ const OptionSection = () => {
       subTitle: "Explore and compare student loan choices.",
       content:
         "Fund your education wisely. Let us assist you in shopping and comparing your options in just minutes.",
-      route: "/student-loans",
+      route: "/Form",
     },
   ];
 
+  
   return (
     <>
-      <Box sx={{ background: "#f5f5f5" }}>
+      <Box sx={{ background: "#f5f5f5", position: "relative", top: "0px" }}>
         <Container>
           <Typography
             sx={{
@@ -523,7 +547,7 @@ const OptionSection = () => {
               {tabItems.map((item, index) => (
                 <div key={index} hidden={value !== index}>
                   {/* {item.content} */}
-                  <Box className="tab-grid-box">
+                  <Box className="tab-grid-box" height="auto">
                     <Grid container spacing={2}>
                       <Grid item xs={12} sm={12} md={6}>
                         {/* <h1 className="tab-first-headding">Personal Loans</h1> */}
@@ -542,41 +566,47 @@ const OptionSection = () => {
                           {item.subHeading}
                         </h1>
                         <Box sx={{ pt: "25px" }}>
-                          <Link
-                            to={item.to}
-                            style={{
-                              textDecoration: "none",
+                          <Button
+                            sx={{
+                              padding: "10px 42px",
+                              background: "#00aeef",
                               color: "#fff",
+                              fontWeight: 700,
+                              textTransform: "capitalize",
+                              fontSize: "18px",
                               "&:hover": {
                                 color: "inherit",
-                                backgroundColor: "#00aeef !important",
+                                backgroundColor: "#4dc7f5 !important",
                               },
                             }}
+                            disableElevation
                           >
-                            <Button
-                              sx={{
-                                padding: "10px 42px",
-                                background: "#00aeef",
+                            <Link
+                              to={item.to}
+                              style={{
+                                textDecoration: "none",
                                 color: "#fff",
-                                fontWeight: 700,
-                                textTransform: "capitalize",
-                                fontSize: "18px",
                                 "&:hover": {
                                   color: "inherit",
-                                  backgroundColor: "#4dc7f5 !important",
+                                  backgroundColor: "#00aeef !important",
                                 },
                               }}
-                              disableElevation
                             >
                               Compare Rates
-                            </Button>
-                          </Link>
+                            </Link>
+                          </Button>
                         </Box>
                       </Grid>
-                      <Grid item xs={12} sm={12} md={6}>
-                        <Box>
-                          <img src={item.img} alt="tab img" width={"100%"} />
-                        </Box>
+                      <Grid item xs={12} sm={12} md={6} >
+                      {item.img ? (
+                    <img src={item.img} alt={item.label} className="img-fluid" />
+                  ) : (
+                    <Lottie 
+                    options={{ ...defaultOptions, animationData: item.animationData }} 
+                    height={item.animationSize?.height || 100}
+                    width={item.animationSize?.width || 100}
+                      />
+                  )}
                       </Grid>
                     </Grid>
                   </Box>
@@ -610,7 +640,8 @@ const OptionSection = () => {
             </Grid> */}
             <List>
               <ListItemButton onClick={handleClick}>
-                {/* <ListItemIcon>
+                <ListItemIcon>
+                  {/* <InboxIcon /> icon */}
                   <Box sx={{ display: { xs: "none" } }}>
                     <img
                       src={tabFaqImg}
@@ -619,7 +650,7 @@ const OptionSection = () => {
                       height="157px"
                     />
                   </Box>
-                </ListItemIcon> */}
+                </ListItemIcon>
                 <Grid container>
                   <Grid item xs={12} sm={7} lg={7}>
                     <Box>
@@ -657,7 +688,7 @@ const OptionSection = () => {
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <Container fluid>
                   <Grid container spacing={2}>
-                    <Grid item lg={2} sx={{ display: { xs: "none" } }}></Grid>
+                    <Grid item lg={2}></Grid>
                     <Grid item lg={10}>
                       {" "}
                       <List component="div" disablePadding>
@@ -717,7 +748,7 @@ const OptionSection = () => {
                             <Box sx={{ pt: "25px" }}>
                               <Button
                                 sx={{
-                                  padding: "10px 25px",
+                                  padding: "10px 42px",
                                   background: "#00aeef",
                                   color: "#fff",
                                   fontWeight: 700,
@@ -743,6 +774,14 @@ const OptionSection = () => {
       </Box>
     </>
   );
+};
+
+OptionSection.propTypes = {
+  items: PropTypes.array.isRequired,
+  animationSize: PropTypes.shape({
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default OptionSection;

@@ -4,6 +4,9 @@ import Wimg from "../../../assets/what-does-lt-do-woman.jpeg";
 import "./index.css";
 import Wimg1 from "../../../assets/mortgage.svg";
 import Wimg2 from "../../../assets/rating.svg";
+import Lottie from 'react-lottie';
+import Animation3 from '../../../Lottie-Files/Animation3.json'
+
 const What = () => {
   const WhatData = [
     {
@@ -35,6 +38,15 @@ const What = () => {
       heading: "Home Equity Loans",
     },
   ];
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Animation3,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
     <>
       <Box
@@ -78,8 +90,8 @@ const What = () => {
                 </Box>
               </Grid>
               <Grid xs={12} sm={6} md={6} lg={6}>
-                <Box sx={{ p: 2, textAlign: "center" }}>
-                  <img src={Wimg} alt="img" className="Wimg" />
+              <Box>
+                <Lottie options={defaultOptions}  />
                 </Box>
               </Grid>
             </Grid>
