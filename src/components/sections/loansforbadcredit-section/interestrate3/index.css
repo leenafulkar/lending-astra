@@ -1,0 +1,16 @@
+.interest-head {
+    font-size: 15px;
+    font-weight: bold;
+    color:#FFFFFF;
+    background-color: #08C177;
+    padding: 14px 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.interest-rate-data {
+    font-size: 14px;
+    font-family:'Lato', sans-serif;
+    color:'#000000';
+    padding: 11px;
+}

@@ -1,0 +1,18 @@
+.banner-headding {
+    font-size: 2.824em;
+    color: #101f30;
+    /* font-family: Georgia, Times, times new roman, serif; */
+    font-family: Georgia, Times, times new roman, serif;
+}
+
+.banner-btn {
+    background: #101f30;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 260px;
+
+
+}

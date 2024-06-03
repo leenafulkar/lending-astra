@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box
+}
+
+h1,
+p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+/* Globale css */
+
+.trust-headding {
+  font-family: "Lato", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: #101f30;
+  line-height: 36px;
+  margin: 0px;
+  text-align: center;
+  padding: 40px 0 60px;
+}
+
+.left-headding {
+  font-family: "Lato", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: #101f30;
+  line-height: 36px;
+  margin: 0px;
+  text-align: start;
+  padding: 32px 0 0px;
+}
+
+.right-headding {
+  font-family: "Lato", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: #101f30;
+  line-height: 36px;
+  margin: 0px;
+  text-align: end;
+  /* padding: 40px 0 60px; */
+}
+
+.btn-radius {
+  font-size: 16px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 700;
+  padding: 18px 54px;
+  border: 2px solid #101f30;
+  color: #101f30;
+}
+
+@media only screen and (max-width: 768px) {
+  .trust-headding {
+    text-align: center;
+  }
+
+  .left-headding {
+    text-align: center;
+  }
+}

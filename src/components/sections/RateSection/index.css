@@ -1,0 +1,93 @@
+.box-headding {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #454545;
+    margin: 0;
+}
+
+.box-para {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #454545;
+    margin: 0;
+}
+
+.box-number {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 58px;
+    color: #101f30;
+    margin: 0;
+}
+
+.box-amount {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #a3a3a3;
+}
+
+.bottom-para-rate {
+    text-align: center;
+    font-size: 14px;
+    color: #4b5155;
+    padding-top: 12px;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 2px 22px 44px #1b9b68;
+    padding: 20px;
+    /* width: 206px; */
+    margin: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    height: 100%;
+}
+
+.card-headding {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #454545;
+}
+
+.main-box {
+    padding-left: 40px;
+    margin-top: 40px;
+}
+
+
+.card-para {
+    font-size: 14px;
+    line-height: 1.25;
+    padding: 10px 0 0;
+    min-height: 35px;
+    margin: 0;
+    color: #454545;
+}
+
+.card-link {
+    font-size: 14px;
+    color: #00aeef;
+    padding: 20px 0 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-box {
+        padding-left: 15px;
+    }
+}

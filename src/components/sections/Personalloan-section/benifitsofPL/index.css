@@ -1,0 +1,45 @@
+
+.green-dot::before {
+    content: "\2022"; 
+    color: green; 
+    margin-right: 0.5em; 
+    font-size: 1.5em;
+    
+}
+
+
+.interest-headd {
+    font-size: 15px;
+    font-weight: bold;
+    color:#FFFFFF;
+    background-color: #101F30;
+    padding: 14px 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.pros-data {
+    font-size: 17px;
+    color:#454545;
+    font-family: 'Lato', sans-serif;
+    padding: 0px 0px 22px 0px;
+
+}
+
+
+
+.check-data {
+    color: #08C177;
+    font-size: 22px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+.close-data {
+    color: #FF0000;
+    font-size: 22px;
+    vertical-align: middle;
+    margin-right: 5px;
+}

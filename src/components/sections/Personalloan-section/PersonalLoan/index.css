@@ -1,0 +1,36 @@
+.content1 {
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    color:#454545;
+    margin: 0px 0px 26px;
+    text-align: left;
+    box-shadow: none;
+    
+}
+
+.text-underline {
+    text-decoration: none;
+}
+
+.text-link {
+    text-decoration: none;
+    text-align: left;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+   
+}
+
+
+
+.content-link {
+  font-size: 80px;
+}
+
+
+.green-dot::before {
+    content: "\2022"; 
+    color: green; 
+    margin-right: 0.5em; 
+    font-size: 1.5em;
+    
+}
