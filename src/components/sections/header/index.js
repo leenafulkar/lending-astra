@@ -1029,7 +1029,8 @@ import {
   ListItemText,
   IconButton,
 } from "@mui/material";
-import logo from "../../../assets/logo.svg";
+// import logo from "../../../assets/logo.svg";
+import logo from '../../../assets/lendingastra.png'
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
@@ -1187,7 +1188,7 @@ function Header() {
               <img
                 src={logo}
                 alt="log"
-                width="140"
+                width="200"
                 height="70"
                 style={{ paddingRight: "20px" }}
               />
