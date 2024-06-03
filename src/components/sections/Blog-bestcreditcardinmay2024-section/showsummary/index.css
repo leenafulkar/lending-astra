@@ -1,0 +1,8 @@
+
+.black-dot::before {
+    content: "\2022"; 
+    color: black; 
+    margin-right: 0.5em; 
+    font-size: 1.5em;
+    
+}

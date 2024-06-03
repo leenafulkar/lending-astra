@@ -1,0 +1,151 @@
+.progress-head {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    /* background-color: aqua; */
+}
+.separator{
+  height: 1px;
+  background: #171A1629;
+  margin-bottom: 25px;
+}
+
+.progress-wrapper {
+    margin: 0px 0px 40px 0px;
+    width: 100%;
+}
+
+/* tool tip */
+.container {
+    /* margin-top: 50px; */
+    /* padding: 10px; */
+  }
+  .progress_bar_section{
+    padding-top: 20px;
+  }
+  
+  .wrappers {
+    text-transform: uppercase;
+    background: #ececec;
+    color: #555;
+    cursor: help;
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .wrappers .tooltip {
+    background: #1496bb;
+    bottom: 100%;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 1;
+    padding: 20px;
+    pointer-events: none;
+    position: absolute;
+    width: 20%;
+  }
+  
+  /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+  .wrappers .tooltip:before {
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }  
+  
+  /* CSS Triangles - see Trevor's post */
+  .wrappers .tooltip:after {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid #1496bb 10px;
+    bottom: -10px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+    
+  .wrappers:hover .tooltip {
+    opacity: 1;
+  }
+  
+  /* IE can just show/hide with no transition */
+  .lte8 .wrappers .tooltip {
+    display: none;
+  }
+  
+  .lte8 .wrappers:hover .tooltip {
+    display: block;
+  }
+  
+  #myProgress {
+    width: 100%;
+    background-color: #ddd;
+  }
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+  }
+
+
+  #my-tooltip {
+    background: #4CAF50;
+    color: white;
+    visibility: visible;
+    /* padding: 5px; */
+    border-radius: 5px;
+  }
+  /* .tooltip-arrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent;
+  } */
+
+  .pro_no_css{
+    visibility: visible;
+    width: 50px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    /* left: 220%; */
+    /* margin-left: -60px; */
+  }
+  .pro_no_css::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent   transparent #85BB65  transparent ;
+  }
+  
+
+
+
+
+@media (max-width: 767px) {
+
+    .progress-wrappers {
+        width: 460px !important;
+    }
+}

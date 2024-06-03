@@ -1,0 +1,27 @@
+
+.h1 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #101F30;
+    margin: 20px 0px 50px 0px;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+   
+
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #00b29f;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+}

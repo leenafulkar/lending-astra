@@ -1,0 +1,31 @@
+.whatPara {
+
+    padding: 30px 0;
+    background: #f1f3f3;
+    color: #101f30;
+    margin: 0 auto;
+    line-height: 32px;
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+}
+
+.w-heading {
+    color: #a3a3a3;
+    vertical-align: 4px;
+    padding: 0 0 0 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+}
+
+.Wimg {
+    width: 333px;
+    height: 539px;
+}
+
+@media only screen and (max-width: 425px) {
+    .Wimg {
+        width: 315px;
+        height: 400px;
+        max-width: 100%;
+    }
+}
